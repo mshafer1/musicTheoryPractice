@@ -1,0 +1,12 @@
+.bodyMain
+{
+	margin-left: 0px;
+	display: block;
+}
+
+@media screen and (min-width : 995px) {
+	.bodyMain
+	{
+		margin-left: 200px;
+	}
+}

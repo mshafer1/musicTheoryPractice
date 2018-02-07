@@ -1,0 +1,316 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/w3.css"><!--http://www.w3schools.com/lib/w3.css-->
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/script.js"></script>
+	<script>
+		function toggleMenu() {
+			document.getElementById("demo").classList.toggle("w3-hide");
+		}	
+	</script>
+</head>
+
+<body>
+	<div>
+		<nav class="w3-sidenav w3-large w3-light-grey w3-left-align w3-hide-medium w3-hide-small" style="">
+			<div class="w3-container w3-dark-grey">
+				<h4>Menu</h4>
+			</div>
+			<!-- sideNav -->
+			<div style="width:90%; margin: 10px; background-image: url(images/icon.svg); background-size: 80px 60px; background-repeat: no-repeat; height: 100px; border: 1px solid black;"><span >Theory<br/>Practice</span></div>
+			<!-- <a class="w3-padding w3-hover-black" href="#">Task 1</a>		
+			<a class="w3-padding w3-hover-black" href="#">Task 2</a>			 -->					
+		</nav>
+
+		<div id="demo" class="w3-hide w3-hide-large">
+		  <ul class="w3-navbar w3-left-align w3-large w3-light-grey w3-animate-top">
+			<!-- <li><a class="w3-padding w3-hover-black" href="#">Task 1</a></li>			
+			<li><a class="w3-padding w3-hover-black" href="#">Task 2</a></li>	 -->		
+		  </ul>
+		</div>
+		<ul class="w3-navbar w3-large w3-black w3-hide-large w3-left-align">
+			<li class=" w3-hide-large w3-light-grey w3-opennav w3-left w3-border">
+				<a href="javascript:void(0);" onclick="toggleMenu()"><div style="width:60px; height: 30px; margin: 0px; background-image: url(images/icon.svg); background-size: 60px 30px; background-repeat: no-repeat;"><span style="font-size: 10pt"><b>Theory<br/>Practice</b></span></div></a>
+			</li>
+		</ul>
+	</div>	
+	
+
+	
+	<div id="body" class="bodyMain">	
+		<div class="w3-row">
+			<div class= "w3-col s12 w3-center">
+				<p id="prompt"></p>													
+			</div>
+		</div>
+		<div class="w3-row">
+			<div class="w3-col l6">
+				<div id="controls" class="w3-container">
+					<div class="w3-border">
+						<h4 class="w3-left-align w3-dark-grey w3-hide-small w3-hide-medium">Solfege</h4>
+						<h4><Button class="w3-btn-block w3-left-align w3-dark-grey w3-hide-large" onclick="showSection('Solfege')">Solfege <i id="arrowSolfege" class="fa fa-caret-right w3-hide-large" aria-hidden="true"></i></h4>
+						<div class="w3-row w3-accordion-content w3-container w3-hide-large" id="DropdownSolfege">
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'Do')">Do</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'Re')">Re</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'Mi')">Mi</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'Fa')">Fa</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'So')">So</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'La')">La</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'Ti')">Ti</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('0', 'Do')">Do</button></div>
+						</div>
+						<div class="w3-row-padding w3-padding-1 w3-hide-small w3-hide-medium">
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'Do')">Do</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'Re')">Re</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'Mi')">Mi</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'Fa')">Fa</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'So')">So</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'La')">La</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'Ti')">Ti</button></div>
+							<div class="w3-col l2 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('0', 'Do')">Do</button></div>
+						</div>
+					</div>
+					
+					<div class="w3-border">
+						<h4 class="w3-left-align w3-dark-grey w3-hide-small w3-hide-medium">FB</h4>
+						<h4><Button class="w3-btn-block w3-left-align w3-dark-grey w3-hide-large" onclick="showSection('FB')">FB <i id="arrowFB" class="fa fa-caret-right w3-hide-large" aria-hidden="true"></i></h4>
+						<div class="w3-accordion-content w3-container w3-hide-large" id="DropdownFB">
+							<div class="w3-row">
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '5/3')">5/3</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '6/3')">6/3</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '6/4')">6/4</button></div>
+								
+							</div>
+							<div class="w3-row">
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '7')">7</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '6/5')">6/5</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '4/3')">4/3</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '4/2')">4/2</button></div>								
+							</div>
+						</div>
+						<div class="w3-row-padding w3-padding-1 w3-hide-small w3-hide-medium">
+							<div class="w3-row">
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '5/3')">5/3</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '6/3')">6/3</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '6/4')">6/4</button></div>
+								
+							</div>
+							<div class="w3-row">
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '7')">7</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '6/5')">6/5</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '4/3')">4/3</button></div>
+								<div class="w3-col s3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('2', '4/2')">4/2</button></div>								
+							</div>
+						</div>
+					</div>
+					
+					<div class="w3-border">
+						<h4 class="w3-left-align w3-dark-grey w3-hide-small w3-hide-medium">RN</h4>
+						<h4><Button class="w3-btn-block w3-left-align w3-dark-grey w3-hide-large" onclick="showSection('RN')">RN <i id="arrowRN" class="fa fa-caret-right w3-hide-large" aria-hidden="true"></i></h4>
+						<div class="w3-row w3-accordion-content w3-container w3-hide-large" id="DropdownRN">
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('1', 'I')">I</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('1', 'ii')">ii</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('1', 'iii')">iii</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('1', 'IV')">IV</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('1', 'V')">V</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('1', 'vi')">vi</button></div>
+							<div class="w3-col m2 s3 w3-section"><button class="w3-btn w3-padding-small" onclick="addToResult('1', 'vii0')">vii0</button>	</div>
+						</div>
+						<div class="w3-row-padding w3-padding-1 w3-hide-small w3-hide-medium">
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('1', 'I')">I</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('1', 'ii')">ii</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('1', 'iii')">iii</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('1', 'IV')">IV</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('1', 'V')">V</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('1', 'vi')">vi</button></div>
+							<div class="w3-col l3 w3-section"><button class="w3-btn w3-padding-medium" onclick="addToResult('1', 'vii0')">vii0</button>	</div>
+						</div>
+					</div>
+					
+				</div>				
+			</div>
+			
+			<div class="w3-col l6 w3-container">
+				<div class="w3-border">
+					<h4 class="w3-dark-grey">Result</h4>
+					
+					<div class="w3-row-padding w3-padding-16">
+						<div class="w3-col s2"><div id="Result00" style="min-height: 2.25em;" ></div></div>							
+						<div class="w3-col s2"><div id="Result01" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s2"><div id="Result02" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s2"><div id="Result03" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s4 w3-center"><button class="w3-btn" onclick="erase('0');" title="clear line"><i class="fa fa-eraser"></i></button></div>
+					</div>
+					
+					<div class="w3-row-padding w3-padding-16 w3-border">
+						<div class="w3-col s2"><div id="Result20" style="min-height: 2.25em;" ></div></div>							
+						<div class="w3-col s2"><div id="Result21" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s2"><div id="Result22" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s2"><div id="Result23" style="min-height: 2.25em;" ></div></div>		
+						<div class="w3-col s4 w3-center"><button class="w3-btn" onclick="erase('2');" title="clear line"><i class="fa fa-eraser"></i></button></div>
+					</div>
+					
+					<div class="w3-row-padding w3-padding-16 ">
+						<div class="w3-col s2"><div id="Result10" style="min-height: 2.25em;" ></div></div>							
+						<div class="w3-col s2"><div id="Result11" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s2"><div id="Result12" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s2"><div id="Result13" style="min-height: 2.25em;" ></div></div>	
+						<div class="w3-col s4 w3-center"><button class="w3-btn" onclick="erase('1');" title="clear line"><i class="fa fa-eraser"></i></button></div>
+					</div>
+					
+					<div id="checkRow" class="w3-center result"><button class="w3-btn" onclick="checkResult()">Check</button></div>
+					<div id="correct" class="w3-hide result">
+						<div class="w3-row">
+							<div class="w3-col s12">
+								<!-- correct icon and message -->
+								Correct! <i class="fa fa-smile-o" aria-hidden="true"></i> 
+							</div>
+						</div>
+						<div class="w3-row-padding">
+									<div class="w3-right" style="width: 30%"><button class="w3-btn" onclick="reload()">Next >></button></div>
+						</div>
+					</div>
+					<div id="incorrect" class="w3-hide result">			
+						<div class="w3-row">					
+								<!-- incorrect icon and message -->
+								That is incorrect <i class="fa fa-frown-o" aria-hidden="true"></i>
+						</div>
+						<div class="w3-row-padding">	 
+							
+							<!-- reset -->
+							<div class="w3-col"  style="width: 70%">
+								<button class="w3-btn w3-right" onclick="showCheck()">Reset</button>
+							</div>
+							
+							<!-- next -->
+							<div class="w3-col"  style="width: 30%">
+								<button class="w3-btn" onclick="reload()">Next >></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var indexes = [0,0,0]
+		function addToResult(box, input)
+		{			
+			if (indexes[box] < 4)
+			{
+				//console.log('#Result' + box + indexes[box])
+				$('#Result' + box + indexes[box]++).html(input)
+			}
+			else
+			{
+				//console.log('ignoring\nBox: ' + box + '\nValue: ' + input)
+			}
+		}
+		
+		function undo(box)
+		{
+			if (indexes[box] > 0)
+			{
+				//console.log('#Result' + box + indexes[box])
+				$('#Result' + box + --indexes[box]).html('')
+			}
+			else
+			{
+				//console.log('ignoring\nBox: ' + box)
+			}
+		}
+		
+		function erase(box)
+		{
+			//console.log('Erase')
+			while (indexes[box] > 0)
+			{
+				//console.log('#Result' + box + indexes[box])
+				$('#Result' + box + --indexes[box]).html('')
+			}			
+		}
+		
+		function checkResult()
+		{
+			$(".result").addClass("w3-hide");
+			ga('send', 'event', { eventCategory: 'Submitted', eventLabel: 'bassLine', eventValue: 1});
+			if(check())
+			{
+				$("#correct").removeClass("w3-hide");
+				ga('send', 'event', { eventCategory: 'Correct', eventLabel: 'bassLine', eventValue: 1});
+			}
+			else
+			{				
+				$("#incorrect").removeClass("w3-hide");
+			}
+		}
+		
+		function showSection(id) {
+			if($('#Dropdown' + id).hasClass("w3-show"))
+			{
+				$(".w3-accordion-content").removeClass("w3-show"); 				
+				$(".fa-caret-right").removeClass("fa-rotate-90"); 
+			}
+			else
+			{
+				$(".w3-accordion-content").removeClass("w3-show"); //hide all - make sure none of the others are open
+				$(".fa-caret-right").removeClass("fa-rotate-90"); 
+				$('#arrow' + id).addClass('fa-rotate-90');
+				$('#Dropdown' + id).addClass('w3-show');
+			}
+		}
+		var Prompts = ["Passing","Passing, using V(?)","Passing, using vii0(?)","Neighbor","Neighbor around Do","Neighbor around Do, using V(?)","Neighbor around Mi","Pedal","Incomplete neighbor","Incomplete neighbor, start on D","Incomplete neighbor, start on M",/*"Arpeggiated",*/"5th","5th, using Sol","5th, using Fa","Double neighbor"];
+		function getBaseLog(x, y) 
+		{
+			return Math.floor(Math.log(y) / Math.log(x));
+		}
+		function randomPick(array)
+		{
+			var rand = Math.random();	
+			var size = getBaseLog(10,array.length);
+			var z = Math.pow(10,size+1);
+			var a = Math.floor(rand*z);
+			var b = a%array.length;
+			//alert(a + " out of " + array.length + "=" + b);
+			return b;
+		}
+		function getPrompt()
+		{
+			$("#prompt").html(Prompts[randomPick(Prompts)]);
+		}
+		function showCheck()
+		{
+			$(".result").addClass("w3-hide"); //hide all result boxes
+			$("#checkRow").removeClass("w3-hide");	//show check box		
+		}
+		function reset()
+		{
+			erase('0');
+			erase('1');
+			erase('2');
+			
+			showCheck();
+		}
+		
+		function reload()
+		{
+			reset();
+			getPrompt();
+		}
+		$(document).ready(getPrompt)
+	</script>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-61515744-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
